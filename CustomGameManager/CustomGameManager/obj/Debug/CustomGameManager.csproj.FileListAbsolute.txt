@@ -1,0 +1,10 @@
+C:\Users\Mastermind\source\repos\CustomGameManager\CustomGameManager\bin\Debug\CustomGameManager.exe.config
+C:\Users\Mastermind\source\repos\CustomGameManager\CustomGameManager\bin\Debug\CustomGameManager.exe
+C:\Users\Mastermind\source\repos\CustomGameManager\CustomGameManager\bin\Debug\CustomGameManager.pdb
+C:\Users\Mastermind\source\repos\CustomGameManager\CustomGameManager\obj\Debug\CustomGameManager.csproj.AssemblyReference.cache
+C:\Users\Mastermind\source\repos\CustomGameManager\CustomGameManager\obj\Debug\CustomGameManager.Form1.resources
+C:\Users\Mastermind\source\repos\CustomGameManager\CustomGameManager\obj\Debug\CustomGameManager.Properties.Resources.resources
+C:\Users\Mastermind\source\repos\CustomGameManager\CustomGameManager\obj\Debug\CustomGameManager.csproj.GenerateResource.cache
+C:\Users\Mastermind\source\repos\CustomGameManager\CustomGameManager\obj\Debug\CustomGameManager.csproj.CoreCompileInputs.cache
+C:\Users\Mastermind\source\repos\CustomGameManager\CustomGameManager\obj\Debug\CustomGameManager.exe
+C:\Users\Mastermind\source\repos\CustomGameManager\CustomGameManager\obj\Debug\CustomGameManager.pdb
