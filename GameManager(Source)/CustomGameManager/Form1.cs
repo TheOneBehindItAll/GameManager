@@ -21,6 +21,8 @@ namespace CustomGameManager
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Game1.Text = Properties.Settings.Default.one;
             Game2.Text = Properties.Settings.Default.two;
             Game3.Text = Properties.Settings.Default.three;
