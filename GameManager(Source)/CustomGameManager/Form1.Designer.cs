@@ -51,6 +51,7 @@ namespace CustomGameManager
             this.Game1.Size = new System.Drawing.Size(182, 182);
             this.Game1.TabIndex = 0;
             this.Game1.Text = "Game 1";
+            this.Game1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Game1.UseVisualStyleBackColor = true;
             this.Game1.Click += new System.EventHandler(this.Game1_Click);
             // 
@@ -61,6 +62,7 @@ namespace CustomGameManager
             this.Game2.Size = new System.Drawing.Size(182, 182);
             this.Game2.TabIndex = 1;
             this.Game2.Text = "Game 2";
+            this.Game2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Game2.UseVisualStyleBackColor = true;
             this.Game2.Click += new System.EventHandler(this.Game2_Click);
             // 
@@ -71,6 +73,7 @@ namespace CustomGameManager
             this.Game3.Size = new System.Drawing.Size(182, 182);
             this.Game3.TabIndex = 4;
             this.Game3.Text = "Game 3";
+            this.Game3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Game3.UseVisualStyleBackColor = true;
             this.Game3.Click += new System.EventHandler(this.Game3_Click);
             // 
@@ -81,6 +84,7 @@ namespace CustomGameManager
             this.Game4.Size = new System.Drawing.Size(182, 182);
             this.Game4.TabIndex = 5;
             this.Game4.Text = "Game 4";
+            this.Game4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Game4.UseVisualStyleBackColor = true;
             this.Game4.Click += new System.EventHandler(this.Game4_Click);
             // 
@@ -91,6 +95,7 @@ namespace CustomGameManager
             this.Game5.Size = new System.Drawing.Size(182, 182);
             this.Game5.TabIndex = 6;
             this.Game5.Text = "Game 5";
+            this.Game5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Game5.UseVisualStyleBackColor = true;
             this.Game5.Click += new System.EventHandler(this.Game5_Click);
             // 
@@ -101,6 +106,7 @@ namespace CustomGameManager
             this.Game10.Size = new System.Drawing.Size(182, 182);
             this.Game10.TabIndex = 13;
             this.Game10.Text = "Game 10";
+            this.Game10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Game10.UseVisualStyleBackColor = true;
             this.Game10.Click += new System.EventHandler(this.Game10_Click);
             // 
@@ -111,6 +117,7 @@ namespace CustomGameManager
             this.Game9.Size = new System.Drawing.Size(182, 182);
             this.Game9.TabIndex = 10;
             this.Game9.Text = "Game 9";
+            this.Game9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Game9.UseVisualStyleBackColor = true;
             this.Game9.Click += new System.EventHandler(this.Game9_Click);
             // 
@@ -121,6 +128,7 @@ namespace CustomGameManager
             this.Game8.Size = new System.Drawing.Size(182, 182);
             this.Game8.TabIndex = 9;
             this.Game8.Text = "Game 8";
+            this.Game8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Game8.UseVisualStyleBackColor = true;
             this.Game8.Click += new System.EventHandler(this.Game8_Click);
             // 
@@ -131,6 +139,7 @@ namespace CustomGameManager
             this.Game7.Size = new System.Drawing.Size(182, 182);
             this.Game7.TabIndex = 8;
             this.Game7.Text = "Game 7";
+            this.Game7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Game7.UseVisualStyleBackColor = true;
             this.Game7.Click += new System.EventHandler(this.Game7_Click);
             // 
@@ -141,6 +150,7 @@ namespace CustomGameManager
             this.Game6.Size = new System.Drawing.Size(182, 182);
             this.Game6.TabIndex = 7;
             this.Game6.Text = "Game 6";
+            this.Game6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Game6.UseVisualStyleBackColor = true;
             this.Game6.Click += new System.EventHandler(this.Game6_Click);
             // 

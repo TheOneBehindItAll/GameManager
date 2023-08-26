@@ -31,6 +31,84 @@ namespace CustomGameManager
             Game8.Text = Properties.Settings.Default.eight;
             Game9.Text = Properties.Settings.Default.nine;
             Game10.Text = Properties.Settings.Default.ten;
+
+            if(Game1.Text != "")
+            {
+                Icon theIcon1 = ExtractIconFromFilePath(Game1.Text);
+                Game1.Image = theIcon1.ToBitmap();
+            }
+            if (Game2.Text != "")
+            {
+                Icon theIcon2 = ExtractIconFromFilePath(Game2.Text);
+                Game2.Image = theIcon2.ToBitmap();
+            }
+            if (Game3.Text != "")
+            {
+                Icon theIcon3 = ExtractIconFromFilePath(Game3.Text);
+                Game3.Image = theIcon3.ToBitmap();
+            }
+                
+            if (Game4.Text != "")
+            {
+                Icon theIcon4 = ExtractIconFromFilePath(Game4.Text);
+                Game4.Image = theIcon4.ToBitmap();
+            }
+             
+            if (Game5.Text != "")
+            {
+                Icon theIcon5 = ExtractIconFromFilePath(Game5.Text);
+                Game5.Image = theIcon5.ToBitmap();
+            }
+              
+            if (Game6.Text != "")
+            {
+                Icon theIcon6 = ExtractIconFromFilePath(Game6.Text);
+                Game6.Image = theIcon6.ToBitmap();
+            }
+               
+            if (Game7.Text != "")
+            {
+                Icon theIcon7 = ExtractIconFromFilePath(Game7.Text);
+                Game7.Image = theIcon7.ToBitmap();
+            }
+               
+            if (Game8.Text != "")
+            {
+                Icon theIcon8 = ExtractIconFromFilePath(Game8.Text);
+                Game8.Image = theIcon8.ToBitmap();
+            }
+                
+            if (Game9.Text != "")
+            {
+                Icon theIcon9 = ExtractIconFromFilePath(Game9.Text);
+                Game9.Image = theIcon9.ToBitmap();
+            }
+           
+            if (Game10.Text != "")
+            {
+                Icon theIcon10 = ExtractIconFromFilePath(Game10.Text);
+                Game10.Image = theIcon10.ToBitmap();
+            }
+            
+
+
+
+        }
+
+        public static Icon ExtractIconFromFilePath(string executablePath)
+        {
+            Icon result = (Icon)null;
+
+            try
+            {
+                result = Icon.ExtractAssociatedIcon(executablePath);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Unable to extract the icon from the binary");
+            }
+
+            return result;
         }
 
         private void reset_Click(object sender, EventArgs e)
@@ -91,6 +169,12 @@ namespace CustomGameManager
             {
                 Process.Start(Game2.Text);
             }
+
+            if (Game2.Text != "")
+            {
+                Icon theIcon2 = ExtractIconFromFilePath(Game2.Text);
+                Game2.Image = theIcon2.ToBitmap();
+            }
         }
 
         private void Game3_Click(object sender, EventArgs e)
@@ -104,6 +188,12 @@ namespace CustomGameManager
             else
             {
                 Process.Start(Game3.Text);
+            }
+
+            if (Game3.Text != "")
+            {
+                Icon theIcon3 = ExtractIconFromFilePath(Game3.Text);
+                Game3.Image = theIcon3.ToBitmap();
             }
         }
 
@@ -119,6 +209,12 @@ namespace CustomGameManager
             {
                 Process.Start(Game4.Text);
             }
+
+            if (Game4.Text != "")
+            {
+                Icon theIcon4 = ExtractIconFromFilePath(Game4.Text);
+                Game4.Image = theIcon4.ToBitmap();
+            }
         }
 
         private void Game5_Click(object sender, EventArgs e)
@@ -132,6 +228,11 @@ namespace CustomGameManager
             else
             {
                 Process.Start(Game5.Text);
+            }
+            if (Game5.Text != "")
+            {
+                Icon theIcon5 = ExtractIconFromFilePath(Game5.Text);
+                Game5.Image = theIcon5.ToBitmap();
             }
         }
 
@@ -147,6 +248,11 @@ namespace CustomGameManager
             {
                 Process.Start(Game6.Text);
             }
+            if (Game6.Text != "")
+            {
+                Icon theIcon6 = ExtractIconFromFilePath(Game6.Text);
+                Game6.Image = theIcon6.ToBitmap();
+            }
         }
 
         private void Game7_Click(object sender, EventArgs e)
@@ -160,6 +266,11 @@ namespace CustomGameManager
             else
             {
                 Process.Start(Game7.Text);
+            }
+            if (Game7.Text != "")
+            {
+                Icon theIcon7 = ExtractIconFromFilePath(Game7.Text);
+                Game7.Image = theIcon7.ToBitmap();
             }
         }
 
@@ -175,6 +286,12 @@ namespace CustomGameManager
             {
                 Process.Start(Game8.Text);
             }
+
+            if (Game8.Text != "")
+            {
+                Icon theIcon8 = ExtractIconFromFilePath(Game8.Text);
+                Game8.Image = theIcon8.ToBitmap();
+            }
         }
 
         private void Game9_Click(object sender, EventArgs e)
@@ -189,6 +306,11 @@ namespace CustomGameManager
             {
                 Process.Start(Game9.Text);
             }
+            if (Game9.Text != "")
+            {
+                Icon theIcon9 = ExtractIconFromFilePath(Game9.Text);
+                Game9.Image = theIcon9.ToBitmap();
+            }
         }
 
         private void Game10_Click(object sender, EventArgs e)
@@ -202,6 +324,11 @@ namespace CustomGameManager
             else
             {
                 Process.Start(Game10.Text);
+            }
+            if (Game10.Text != "")
+            {
+                Icon theIcon10 = ExtractIconFromFilePath(Game10.Text);
+                Game10.Image = theIcon10.ToBitmap();
             }
         }
 
