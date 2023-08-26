@@ -23,77 +23,8 @@ namespace CustomGameManager
         {
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
-            Game1.Text = Properties.Settings.Default.one;
-            Game2.Text = Properties.Settings.Default.two;
-            Game3.Text = Properties.Settings.Default.three;
-            Game4.Text = Properties.Settings.Default.four;
-            Game5.Text = Properties.Settings.Default.five;
-            Game6.Text = Properties.Settings.Default.six;
-            Game7.Text = Properties.Settings.Default.seven;
-            Game8.Text = Properties.Settings.Default.eight;
-            Game9.Text = Properties.Settings.Default.nine;
-            Game10.Text = Properties.Settings.Default.ten;
-
-            if(Game1.Text != "")
-            {
-                Icon theIcon1 = ExtractIconFromFilePath(Game1.Text);
-                Game1.Image = theIcon1.ToBitmap();
-            }
-            if (Game2.Text != "")
-            {
-                Icon theIcon2 = ExtractIconFromFilePath(Game2.Text);
-                Game2.Image = theIcon2.ToBitmap();
-            }
-            if (Game3.Text != "")
-            {
-                Icon theIcon3 = ExtractIconFromFilePath(Game3.Text);
-                Game3.Image = theIcon3.ToBitmap();
-            }
-                
-            if (Game4.Text != "")
-            {
-                Icon theIcon4 = ExtractIconFromFilePath(Game4.Text);
-                Game4.Image = theIcon4.ToBitmap();
-            }
-             
-            if (Game5.Text != "")
-            {
-                Icon theIcon5 = ExtractIconFromFilePath(Game5.Text);
-                Game5.Image = theIcon5.ToBitmap();
-            }
-              
-            if (Game6.Text != "")
-            {
-                Icon theIcon6 = ExtractIconFromFilePath(Game6.Text);
-                Game6.Image = theIcon6.ToBitmap();
-            }
-               
-            if (Game7.Text != "")
-            {
-                Icon theIcon7 = ExtractIconFromFilePath(Game7.Text);
-                Game7.Image = theIcon7.ToBitmap();
-            }
-               
-            if (Game8.Text != "")
-            {
-                Icon theIcon8 = ExtractIconFromFilePath(Game8.Text);
-                Game8.Image = theIcon8.ToBitmap();
-            }
-                
-            if (Game9.Text != "")
-            {
-                Icon theIcon9 = ExtractIconFromFilePath(Game9.Text);
-                Game9.Image = theIcon9.ToBitmap();
-            }
-           
-            if (Game10.Text != "")
-            {
-                Icon theIcon10 = ExtractIconFromFilePath(Game10.Text);
-                Game10.Image = theIcon10.ToBitmap();
-            }
-            
-
-
+            nameSetup();
+            iconSetup();
 
         }
 
@@ -123,25 +54,50 @@ namespace CustomGameManager
             if (richTextBox1.Text != "")
             {
                 if (richTextBox1.Text == "1")
-                    Game1.Text = "";
+                    Game1.Text = "";Game1.Image = null;
                 if (richTextBox1.Text == "2")
-                    Game2.Text = "";
+                    Game2.Text = ""; Game2.Image = null;
                 if (richTextBox1.Text == "3")
-                    Game3.Text = "";
+                    Game3.Text = ""; Game3.Image = null;
                 if (richTextBox1.Text == "4")
-                    Game4.Text = "";
+                    Game4.Text = ""; Game4.Image = null;
                 if (richTextBox1.Text == "5")
-                    Game5.Text = "";
+                    Game5.Text = ""; Game5.Image = null;
                 if (richTextBox1.Text == "6")
-                    Game6.Text = "";
+                    Game6.Text = ""; Game6.Image = null;
                 if (richTextBox1.Text == "7")
-                    Game7.Text = "";
+                    Game7.Text = ""; Game7.Image = null;
                 if (richTextBox1.Text == "8")
-                    Game8.Text = "";
+                    Game8.Text = ""; Game8.Image = null;
                 if (richTextBox1.Text == "9")
-                    Game9.Text = "";
+                    Game9.Text = ""; Game9.Image = null;
                 if (richTextBox1.Text == "10")
+                    Game10.Text = ""; Game10.Image = null;
+                if (richTextBox1.Text == "all")
+                {
+                    Game1.Text = "";
+                    Game1.Image = null;
+                    Game2.Text = "";
+                    Game2.Image = null;
+                    Game3.Text = "";
+                    Game3.Image = null;
+                    Game4.Text = "";
+                    Game4.Image = null;
+                    Game5.Text = "";
+                    Game5.Image = null;
+                    Game6.Text = "";
+                    Game6.Image = null;
+                    Game7.Text = "";
+                    Game7.Image = null;
+                    Game8.Text = "";
+                    Game8.Image = null;
+                    Game9.Text = "";
+                    Game9.Image = null;
                     Game10.Text = "";
+                    Game10.Image = null;
+                }
+                   
+
             }
         }
 
@@ -347,6 +303,82 @@ namespace CustomGameManager
             Properties.Settings.Default.nine = Game9.Text;
             Properties.Settings.Default.ten = Game10.Text;
             Properties.Settings.Default.Save();
+        }
+
+        void iconSetup()
+        {
+            if (Game1.Text != "")
+            {
+                Icon theIcon1 = ExtractIconFromFilePath(Game1.Text);
+                Game1.Image = theIcon1.ToBitmap();
+            }
+            if (Game2.Text != "")
+            {
+                Icon theIcon2 = ExtractIconFromFilePath(Game2.Text);
+                Game2.Image = theIcon2.ToBitmap();
+            }
+            if (Game3.Text != "")
+            {
+                Icon theIcon3 = ExtractIconFromFilePath(Game3.Text);
+                Game3.Image = theIcon3.ToBitmap();
+            }
+
+            if (Game4.Text != "")
+            {
+                Icon theIcon4 = ExtractIconFromFilePath(Game4.Text);
+                Game4.Image = theIcon4.ToBitmap();
+            }
+
+            if (Game5.Text != "")
+            {
+                Icon theIcon5 = ExtractIconFromFilePath(Game5.Text);
+                Game5.Image = theIcon5.ToBitmap();
+            }
+
+            if (Game6.Text != "")
+            {
+                Icon theIcon6 = ExtractIconFromFilePath(Game6.Text);
+                Game6.Image = theIcon6.ToBitmap();
+            }
+
+            if (Game7.Text != "")
+            {
+                Icon theIcon7 = ExtractIconFromFilePath(Game7.Text);
+                Game7.Image = theIcon7.ToBitmap();
+            }
+
+            if (Game8.Text != "")
+            {
+                Icon theIcon8 = ExtractIconFromFilePath(Game8.Text);
+                Game8.Image = theIcon8.ToBitmap();
+            }
+
+            if (Game9.Text != "")
+            {
+                Icon theIcon9 = ExtractIconFromFilePath(Game9.Text);
+                Game9.Image = theIcon9.ToBitmap();
+            }
+
+            if (Game10.Text != "")
+            {
+                Icon theIcon10 = ExtractIconFromFilePath(Game10.Text);
+                Game10.Image = theIcon10.ToBitmap();
+            }
+        }
+        
+
+        void nameSetup()
+        {
+            Game1.Text = Properties.Settings.Default.one;
+            Game2.Text = Properties.Settings.Default.two;
+            Game3.Text = Properties.Settings.Default.three;
+            Game4.Text = Properties.Settings.Default.four;
+            Game5.Text = Properties.Settings.Default.five;
+            Game6.Text = Properties.Settings.Default.six;
+            Game7.Text = Properties.Settings.Default.seven;
+            Game8.Text = Properties.Settings.Default.eight;
+            Game9.Text = Properties.Settings.Default.nine;
+            Game10.Text = Properties.Settings.Default.ten;
         }
     }
 }
