@@ -96,7 +96,7 @@ namespace CustomGameManager
                     Game10.Text = "";
                     Game10.Image = null;
                 }
-                   
+                iconSetup();
 
             }
         }
