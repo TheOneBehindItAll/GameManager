@@ -12,7 +12,8 @@ namespace CustomGameManager
 {
     public partial class Form1 : Form
     {
-        string[] games;
+        Button[] games;
+
 
         public Form1()
         {
@@ -21,10 +22,35 @@ namespace CustomGameManager
 
         private void Form1_Load(object sender, EventArgs e)
         {
+          
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             nameSetup();
             iconSetup();
+            try
+            {
+                this.BackColor = Properties.Settings.Default.bgColor;
+                ColorButton.BackColor = Properties.Settings.Default.bgColor;
+            }
+            catch
+            {
+                MessageBox.Show("Unable to find background color");
+            }
+            try
+            {
+                ButtonColor.BackColor = Properties.Settings.Default.buttonColor;
+                int whl = games.Length;
+                while (whl > 0)
+                {
+                    whl -= 1;
+                    games[whl].BackColor = Properties.Settings.Default.buttonColor;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Unable to find button color");
+            }
+           
 
         }
 
@@ -75,26 +101,15 @@ namespace CustomGameManager
                     Game10.Text = ""; Game10.Image = null;
                 if (richTextBox1.Text == "all")
                 {
-                    Game1.Text = "";
-                    Game1.Image = null;
-                    Game2.Text = "";
-                    Game2.Image = null;
-                    Game3.Text = "";
-                    Game3.Image = null;
-                    Game4.Text = "";
-                    Game4.Image = null;
-                    Game5.Text = "";
-                    Game5.Image = null;
-                    Game6.Text = "";
-                    Game6.Image = null;
-                    Game7.Text = "";
-                    Game7.Image = null;
-                    Game8.Text = "";
-                    Game8.Image = null;
-                    Game9.Text = "";
-                    Game9.Image = null;
-                    Game10.Text = "";
-                    Game10.Image = null;
+                    int whl = games.Length;
+                    while(whl > 0)
+                    {
+                        whl -= 1;
+                        if (games[whl].Image != null)
+                            games[whl].Image = null;
+                        if(games[whl].Text != "")
+                            games[whl].Text = "";
+                    }
                 }
                 iconSetup();
 
@@ -292,6 +307,81 @@ namespace CustomGameManager
 
         private void Save_Click(object sender, EventArgs e)
         {
+            SaveFile();
+        }
+
+
+        void iconSetup()
+        {
+
+            int whl = games.Length;
+            while (whl > 0)
+            {
+                whl -= 1;
+                if (games[whl].Text != "")
+                {
+                    Icon theIcon1 = ExtractIconFromFilePath(games[whl].Text);
+                    games[whl].Image = theIcon1.ToBitmap();
+                }
+            }
+        }
+        
+
+        void nameSetup()
+        {
+            games = new Button[] {Game1, Game2, Game3, Game4, Game5, Game6, Game7, Game8, Game9, Game10 };
+           
+
+            Game1.Text = Properties.Settings.Default.one;
+            Game2.Text = Properties.Settings.Default.two;
+            Game3.Text = Properties.Settings.Default.three;
+            Game4.Text = Properties.Settings.Default.four;
+            Game5.Text = Properties.Settings.Default.five;
+            Game6.Text = Properties.Settings.Default.six;
+            Game7.Text = Properties.Settings.Default.seven;
+            Game8.Text = Properties.Settings.Default.eight;
+            Game9.Text = Properties.Settings.Default.nine;
+            Game10.Text = Properties.Settings.Default.ten;
+        }
+
+        private void Settings_Click(object sender, EventArgs e)
+        {
+            settingsPanel.Show();
+        }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+            settingsPanel.Hide();
+            SaveFile();
+        }
+
+        private void ColorButton_Click(object sender, EventArgs e)
+        {
+            ColorDialog bgColor = new ColorDialog();
+            bgColor.ShowDialog();
+            ColorButton.BackColor = bgColor.Color;
+            this.BackColor = bgColor.Color;
+        }
+
+        private void ButtonColor_Click(object sender, EventArgs e)
+        {
+            ColorDialog bgColor = new ColorDialog();
+            bgColor.ShowDialog();
+            Properties.Settings.Default.buttonColor = bgColor.Color;
+            int whl = games.Length;
+            while (whl > 0)
+            {
+                whl -= 1;
+                games[whl].BackColor = bgColor.Color;
+            }
+          
+        }
+
+        void SaveFile()
+        {
+            Properties.Settings.Default.bgColor = this.BackColor;
+
+
             Properties.Settings.Default.one = Game1.Text;
             Properties.Settings.Default.two = Game2.Text;
             Properties.Settings.Default.three = Game3.Text;
@@ -303,82 +393,6 @@ namespace CustomGameManager
             Properties.Settings.Default.nine = Game9.Text;
             Properties.Settings.Default.ten = Game10.Text;
             Properties.Settings.Default.Save();
-        }
-
-        void iconSetup()
-        {
-            if (Game1.Text != "")
-            {
-                Icon theIcon1 = ExtractIconFromFilePath(Game1.Text);
-                Game1.Image = theIcon1.ToBitmap();
-            }
-            if (Game2.Text != "")
-            {
-                Icon theIcon2 = ExtractIconFromFilePath(Game2.Text);
-                Game2.Image = theIcon2.ToBitmap();
-            }
-            if (Game3.Text != "")
-            {
-                Icon theIcon3 = ExtractIconFromFilePath(Game3.Text);
-                Game3.Image = theIcon3.ToBitmap();
-            }
-
-            if (Game4.Text != "")
-            {
-                Icon theIcon4 = ExtractIconFromFilePath(Game4.Text);
-                Game4.Image = theIcon4.ToBitmap();
-            }
-
-            if (Game5.Text != "")
-            {
-                Icon theIcon5 = ExtractIconFromFilePath(Game5.Text);
-                Game5.Image = theIcon5.ToBitmap();
-            }
-
-            if (Game6.Text != "")
-            {
-                Icon theIcon6 = ExtractIconFromFilePath(Game6.Text);
-                Game6.Image = theIcon6.ToBitmap();
-            }
-
-            if (Game7.Text != "")
-            {
-                Icon theIcon7 = ExtractIconFromFilePath(Game7.Text);
-                Game7.Image = theIcon7.ToBitmap();
-            }
-
-            if (Game8.Text != "")
-            {
-                Icon theIcon8 = ExtractIconFromFilePath(Game8.Text);
-                Game8.Image = theIcon8.ToBitmap();
-            }
-
-            if (Game9.Text != "")
-            {
-                Icon theIcon9 = ExtractIconFromFilePath(Game9.Text);
-                Game9.Image = theIcon9.ToBitmap();
-            }
-
-            if (Game10.Text != "")
-            {
-                Icon theIcon10 = ExtractIconFromFilePath(Game10.Text);
-                Game10.Image = theIcon10.ToBitmap();
-            }
-        }
-        
-
-        void nameSetup()
-        {
-            Game1.Text = Properties.Settings.Default.one;
-            Game2.Text = Properties.Settings.Default.two;
-            Game3.Text = Properties.Settings.Default.three;
-            Game4.Text = Properties.Settings.Default.four;
-            Game5.Text = Properties.Settings.Default.five;
-            Game6.Text = Properties.Settings.Default.six;
-            Game7.Text = Properties.Settings.Default.seven;
-            Game8.Text = Properties.Settings.Default.eight;
-            Game9.Text = Properties.Settings.Default.nine;
-            Game10.Text = Properties.Settings.Default.ten;
         }
     }
 }

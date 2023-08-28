@@ -42,6 +42,15 @@ namespace CustomGameManager
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.reset = new System.Windows.Forms.Button();
             this.Save = new System.Windows.Forms.Button();
+            this.Settings = new System.Windows.Forms.Button();
+            this.settingsPanel = new System.Windows.Forms.Panel();
+            this.ColorButton = new System.Windows.Forms.Button();
+            this.update = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.ButtonColor = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.settingsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Game1
@@ -182,12 +191,90 @@ namespace CustomGameManager
             this.Save.UseVisualStyleBackColor = true;
             this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
+            // Settings
+            // 
+            this.Settings.Location = new System.Drawing.Point(443, 393);
+            this.Settings.Name = "Settings";
+            this.Settings.Size = new System.Drawing.Size(75, 23);
+            this.Settings.TabIndex = 17;
+            this.Settings.Text = "Settings";
+            this.Settings.UseVisualStyleBackColor = true;
+            this.Settings.Click += new System.EventHandler(this.Settings_Click);
+            // 
+            // settingsPanel
+            // 
+            this.settingsPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.settingsPanel.Controls.Add(this.ButtonColor);
+            this.settingsPanel.Controls.Add(this.label2);
+            this.settingsPanel.Controls.Add(this.ColorButton);
+            this.settingsPanel.Controls.Add(this.update);
+            this.settingsPanel.Controls.Add(this.label1);
+            this.settingsPanel.Location = new System.Drawing.Point(0, -1);
+            this.settingsPanel.Name = "settingsPanel";
+            this.settingsPanel.Size = new System.Drawing.Size(964, 431);
+            this.settingsPanel.TabIndex = 18;
+            this.settingsPanel.Visible = false;
+            // 
+            // ColorButton
+            // 
+            this.ColorButton.Location = new System.Drawing.Point(161, 13);
+            this.ColorButton.Name = "ColorButton";
+            this.ColorButton.Size = new System.Drawing.Size(21, 23);
+            this.ColorButton.TabIndex = 3;
+            this.ColorButton.UseVisualStyleBackColor = true;
+            this.ColorButton.Click += new System.EventHandler(this.ColorButton_Click);
+            // 
+            // update
+            // 
+            this.update.Location = new System.Drawing.Point(874, 394);
+            this.update.Name = "update";
+            this.update.Size = new System.Drawing.Size(75, 23);
+            this.update.TabIndex = 2;
+            this.update.Text = "Update Settings";
+            this.update.UseVisualStyleBackColor = true;
+            this.update.Click += new System.EventHandler(this.update_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(3, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(154, 22);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Background Color";
+            // 
+            // ButtonColor
+            // 
+            this.ButtonColor.Location = new System.Drawing.Point(161, 47);
+            this.ButtonColor.Name = "ButtonColor";
+            this.ButtonColor.Size = new System.Drawing.Size(21, 23);
+            this.ButtonColor.TabIndex = 5;
+            this.ButtonColor.UseVisualStyleBackColor = true;
+            this.ButtonColor.Click += new System.EventHandler(this.ButtonColor_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.Control;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(3, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(110, 22);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Button Color";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(961, 426);
+            this.Controls.Add(this.settingsPanel);
+            this.Controls.Add(this.Settings);
             this.Controls.Add(this.Save);
             this.Controls.Add(this.reset);
             this.Controls.Add(this.richTextBox1);
@@ -204,6 +291,8 @@ namespace CustomGameManager
             this.Name = "Form1";
             this.Text = "Game Manager by therealmastermind";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.settingsPanel.ResumeLayout(false);
+            this.settingsPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -223,6 +312,14 @@ namespace CustomGameManager
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button reset;
         private System.Windows.Forms.Button Save;
+        private System.Windows.Forms.Button Settings;
+        private System.Windows.Forms.Panel settingsPanel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.Button update;
+        private System.Windows.Forms.Button ColorButton;
+        private System.Windows.Forms.Button ButtonColor;
+        private System.Windows.Forms.Label label2;
     }
 }
 
