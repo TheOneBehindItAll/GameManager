@@ -45,6 +45,10 @@ namespace CustomGameManager
                     whl -= 1;
                     games[whl].BackColor = Properties.Settings.Default.buttonColor;
                 }
+                reset.BackColor = Properties.Settings.Default.buttonColor;
+                Save.BackColor = Properties.Settings.Default.buttonColor; 
+                Settings.BackColor = Properties.Settings.Default.buttonColor; 
+                richTextBox1.BackColor = Properties.Settings.Default.buttonColor;
             }
             catch
             {
@@ -351,6 +355,11 @@ namespace CustomGameManager
 
         private void update_Click(object sender, EventArgs e)
         {
+            reset.BackColor = Properties.Settings.Default.buttonColor;
+            Save.BackColor = Properties.Settings.Default.buttonColor;
+            Settings.BackColor = Properties.Settings.Default.buttonColor;
+            richTextBox1.BackColor = Properties.Settings.Default.buttonColor;
+            ButtonColor.BackColor = Properties.Settings.Default.buttonColor;
             settingsPanel.Hide();
             SaveFile();
         }

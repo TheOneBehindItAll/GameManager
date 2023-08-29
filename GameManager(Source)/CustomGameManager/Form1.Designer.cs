@@ -44,12 +44,12 @@ namespace CustomGameManager
             this.Save = new System.Windows.Forms.Button();
             this.Settings = new System.Windows.Forms.Button();
             this.settingsPanel = new System.Windows.Forms.Panel();
+            this.ButtonColor = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.ColorButton = new System.Windows.Forms.Button();
             this.update = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.ButtonColor = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.settingsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -209,11 +209,32 @@ namespace CustomGameManager
             this.settingsPanel.Controls.Add(this.ColorButton);
             this.settingsPanel.Controls.Add(this.update);
             this.settingsPanel.Controls.Add(this.label1);
-            this.settingsPanel.Location = new System.Drawing.Point(0, -1);
+            this.settingsPanel.Location = new System.Drawing.Point(0, 0);
             this.settingsPanel.Name = "settingsPanel";
             this.settingsPanel.Size = new System.Drawing.Size(964, 431);
             this.settingsPanel.TabIndex = 18;
             this.settingsPanel.Visible = false;
+            // 
+            // ButtonColor
+            // 
+            this.ButtonColor.Location = new System.Drawing.Point(161, 47);
+            this.ButtonColor.Name = "ButtonColor";
+            this.ButtonColor.Size = new System.Drawing.Size(21, 23);
+            this.ButtonColor.TabIndex = 5;
+            this.ButtonColor.UseVisualStyleBackColor = true;
+            this.ButtonColor.Click += new System.EventHandler(this.ButtonColor_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.Control;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(3, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(110, 22);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Button Color";
             // 
             // ColorButton
             // 
@@ -245,27 +266,6 @@ namespace CustomGameManager
             this.label1.Size = new System.Drawing.Size(154, 22);
             this.label1.TabIndex = 1;
             this.label1.Text = "Background Color";
-            // 
-            // ButtonColor
-            // 
-            this.ButtonColor.Location = new System.Drawing.Point(161, 47);
-            this.ButtonColor.Name = "ButtonColor";
-            this.ButtonColor.Size = new System.Drawing.Size(21, 23);
-            this.ButtonColor.TabIndex = 5;
-            this.ButtonColor.UseVisualStyleBackColor = true;
-            this.ButtonColor.Click += new System.EventHandler(this.ButtonColor_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.Control;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(3, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 22);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Button Color";
             // 
             // Form1
             // 
