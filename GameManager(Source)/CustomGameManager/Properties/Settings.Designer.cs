@@ -176,5 +176,17 @@ namespace CustomGameManager.Properties {
                 this["Setting"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int ButtonStyle {
+            get {
+                return ((int)(this["ButtonStyle"]));
+            }
+            set {
+                this["ButtonStyle"] = value;
+            }
+        }
     }
 }

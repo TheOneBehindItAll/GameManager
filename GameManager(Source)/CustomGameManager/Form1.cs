@@ -22,6 +22,23 @@ namespace CustomGameManager
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            try
+            {
+                comboBox1.SelectedIndex = Properties.Settings.Default.ButtonStyle;
+
+                UpdateButtonStyle();
+            }
+            catch
+            {
+                games = new Button[] { Game1, Game2, Game3, Game4, Game5, Game6, Game7, Game8, Game9, Game10 };
+
+                int whl = games.Length;
+                while (whl > 0)
+                {
+                    whl -= 1;
+                    games[whl].FlatStyle = FlatStyle.Standard;
+                }
+            }
           
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
@@ -34,7 +51,8 @@ namespace CustomGameManager
             }
             catch
             {
-                MessageBox.Show("Unable to find background color");
+                this.BackColor = Color.Black;
+                ColorButton.BackColor = Color.White;
             }
             try
             {
@@ -402,6 +420,42 @@ namespace CustomGameManager
             Properties.Settings.Default.nine = Game9.Text;
             Properties.Settings.Default.ten = Game10.Text;
             Properties.Settings.Default.Save();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateButtonStyle();
+        }
+
+        void UpdateButtonStyle()
+        {
+            if (comboBox1.SelectedIndex == 0)
+            {
+                games = new Button[] { Game1, Game2, Game3, Game4, Game5, Game6, Game7, Game8, Game9, Game10 };
+
+                int whl = games.Length;
+                while (whl > 0)
+                {
+                    whl -= 1;
+                    games[whl].FlatStyle = FlatStyle.Standard;
+                }
+
+            }
+            if (comboBox1.SelectedIndex == 1)
+            {
+                games = new Button[] { Game1, Game2, Game3, Game4, Game5, Game6, Game7, Game8, Game9, Game10 };
+
+                int whl = games.Length;
+                while (whl > 0)
+                {
+                    whl -= 1;
+                    games[whl].FlatStyle = FlatStyle.Flat;
+                }
+
+            }
+
+            Properties.Settings.Default.ButtonStyle = comboBox1.SelectedIndex;
+            
         }
     }
 }
