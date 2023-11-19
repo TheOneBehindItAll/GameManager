@@ -148,7 +148,20 @@ namespace CustomGameManager
             }
             else
             {
-                Process.Start(Game1.Text);
+                try
+                {
+                    Process.Start(Game1.Text);
+                }
+                catch
+                {
+
+                }
+              
+            }
+            if (Game1.Text != "")
+            {
+                Icon theIcon2 = ExtractIconFromFilePath(Game2.Text);
+                Game2.Image = theIcon2.ToBitmap();
             }
         }
 
@@ -162,7 +175,14 @@ namespace CustomGameManager
             }
             else
             {
-                Process.Start(Game2.Text);
+                try
+                {
+                    Process.Start(Game2.Text);
+                }
+                catch
+                {
+
+                }
             }
 
             if (Game2.Text != "")
@@ -182,7 +202,14 @@ namespace CustomGameManager
             }
             else
             {
-                Process.Start(Game3.Text);
+                try
+                {
+                    Process.Start(Game3.Text);
+                }
+                catch
+                {
+
+                }
             }
 
             if (Game3.Text != "")
@@ -202,7 +229,14 @@ namespace CustomGameManager
             }
             else
             {
-                Process.Start(Game4.Text);
+                try
+                {
+                    Process.Start(Game4.Text);
+                }
+                catch
+                {
+
+                }
             }
 
             if (Game4.Text != "")
@@ -222,7 +256,14 @@ namespace CustomGameManager
             }
             else
             {
-                Process.Start(Game5.Text);
+                try
+                {
+                    Process.Start(Game5.Text);
+                }
+                catch
+                {
+
+                }
             }
             if (Game5.Text != "")
             {
@@ -241,7 +282,14 @@ namespace CustomGameManager
             }
             else
             {
-                Process.Start(Game6.Text);
+                try
+                {
+                    Process.Start(Game6.Text);
+                }
+                catch
+                {
+
+                }
             }
             if (Game6.Text != "")
             {
@@ -260,7 +308,14 @@ namespace CustomGameManager
             }
             else
             {
-                Process.Start(Game7.Text);
+                try
+                {
+                    Process.Start(Game7.Text);
+                }
+                catch
+                {
+
+                }
             }
             if (Game7.Text != "")
             {
@@ -279,7 +334,14 @@ namespace CustomGameManager
             }
             else
             {
-                Process.Start(Game8.Text);
+                try
+                {
+                    Process.Start(Game8.Text);
+                }
+                catch
+                {
+
+                }
             }
 
             if (Game8.Text != "")
@@ -299,7 +361,14 @@ namespace CustomGameManager
             }
             else
             {
-                Process.Start(Game9.Text);
+                try
+                {
+                    Process.Start(Game9.Text);
+                }
+                catch
+                {
+
+                }
             }
             if (Game9.Text != "")
             {
@@ -318,7 +387,14 @@ namespace CustomGameManager
             }
             else
             {
-                Process.Start(Game10.Text);
+                try
+                {
+                    Process.Start(Game10.Text);
+                }
+                catch
+                {
+
+                }
             }
             if (Game10.Text != "")
             {
