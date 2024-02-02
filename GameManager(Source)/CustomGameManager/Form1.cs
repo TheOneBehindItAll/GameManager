@@ -411,16 +411,22 @@ namespace CustomGameManager
 
         void iconSetup()
         {
-
-            int whl = games.Length;
-            while (whl > 0)
+            try
             {
-                whl -= 1;
-                if (games[whl].Text != "")
+                int whl = games.Length;
+                while (whl > 0)
                 {
-                    Icon theIcon1 = ExtractIconFromFilePath(games[whl].Text);
-                    games[whl].Image = theIcon1.ToBitmap();
+                    whl -= 1;
+                    if (games[whl].Text != "")
+                    {
+                        Icon theIcon1 = ExtractIconFromFilePath(games[whl].Text);
+                        games[whl].Image = theIcon1.ToBitmap();
+                    }
                 }
+            }
+            catch
+            {
+
             }
         }
         
